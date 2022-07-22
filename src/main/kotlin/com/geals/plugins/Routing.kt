@@ -1,5 +1,6 @@
 package com.geals.plugins
 
+import com.geals.routes.getGealDetailsById
 import com.geals.routes.getGeals
 import io.ktor.server.routing.*
 import io.ktor.http.*
@@ -14,6 +15,7 @@ fun Application.configureRouting() {
 
     routing {
         getGeals()
+        getGealDetailsById()
         // Static plugin. Try to access `/static/index.html`
         static {
             resources("static")
